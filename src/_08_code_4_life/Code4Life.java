@@ -12,13 +12,29 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.swing.JApplet;
 
+import javax.swing.JOptionPane;
+
 public class Code4Life {
+public static void main(String[] args) {
+	
 
 	// 1. Ask the user how many hours they spent coding this week.
-
+	int hr = JOptionPane.showOptionDialog(null, "how many hours did you spend coding this week", "why", 0, 
+			JOptionPane.INFORMATION_MESSAGE, null, 
+			new String[] {"less than or equal to 2", "greater then 3 or less than or equal to 5", "more than 5"}, null);
 	// 2. If it is less than or equal to 2, tell them to stop watching YouTube and
 	// write code instead.
 
+		if (hr == 0) {
+			JOptionPane.showMessageDialog(null, "stop watching youtube");
+		}	
+		else if (hr == 1) {
+			JOptionPane.showMessageDialog(null, " 'you are code ninja' ");
+		}
+		else if (hr == 2) {
+			playBatmanTheme();
+		}
+}
 	// 3. If it is greater than or equal to 3 AND less than or equal to 5, tell them
 	// they're a Code Ninja
 
